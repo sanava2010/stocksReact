@@ -2,9 +2,9 @@
 ## How to run the project
 
 1. Clone the project into a folder.
-2. CD into the folder and open node.js command prompt.
+2. Navigate to 'stocksReact' folder and open Node.js command prompt.
 3. Run the following command: 
-        'npm install'
+        'npm install'.
 4. After the packages are successfully downloaded, run the following command: 
         'npm start'.
    A new tab with the web page should open in your browser. Or open [http://localhost:3000](http://localhost:3000) to view it in the          browser.
