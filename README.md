@@ -1,4 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## How to run the project
 
@@ -8,10 +7,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
         npm install
 4. After the packages are successfully downloaded, run the following command 
         npm start
-   A new tab with the web page should open in your browser.
+   A new tab with the web page should open in your browser. Or open [http://localhost:3000](http://localhost:3000) to view it in the          browser.
+   
+## What the page shows
 
-### `npm start`
+The web page displays a table with stock details of 20 stocks which were fetched from an API.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The search bar at the top enables one to search for a specific stock by typing its name.
+
+
+
+
+
 
