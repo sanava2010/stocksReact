@@ -8,8 +8,6 @@ function App() {
   const [stocks,setStocks] = useState([])
   const [search,setSearch]= useState("")
   useEffect(()=> {
-
-    let data;
     const url = new URL(
       "https://financialmodelingprep.com/api/v3/quote/AAPL,FB,LITE,MDB,MORN,NFLX,NTNX,PLAB,PTC,GOOG,PEP,TSLA,TRIP,ZNGA,QCOM,MSFT,LTRX,DLTR,FISV,EXPE"
     );
@@ -19,12 +17,10 @@ function App() {
         })
         .then(response => response.json())
         .then(json_data => {
-          console.log(json_data)
-          setStocks(json_data)
+          const json=json_data.sort((a,b) => (a.name > b.name) ? 1 : -1);
+          setStocks(json)
           
     }); 
-    
-    console.log("Setting state")
 
   },[])
 
@@ -34,7 +30,7 @@ function App() {
   }
 
   let filteredStocks=stocks.filter((searchStockItem) => {return searchStockItem.name.toLowerCase().indexOf(search.toLowerCase()) !== -1})
-  const stockItems = filteredStocks.map(item => <StockItem item={item} />)
+  const stockItems = filteredStocks.map( (item,index) => <StockItem key={index} item={item} />)
   
   return (
     
